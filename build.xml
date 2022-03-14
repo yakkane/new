@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project default="main">
+   <target name="main" depends="compile,compress">
+       <echo>
+           Building the jar file
+       </echo>
+   </target>
+<target name="compile">
+<javac srcdir="."/>
+</target>
+    <target name="compress" depends="compile">
+        <jar basedir="." jarfile="Animal.jar" includes="*.class"/>
+    </target>
+</project>
